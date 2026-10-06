@@ -10,3 +10,5 @@ segment customers by risk, and provide explainable credit decisions.
 - SHAP-based explainability
 - ROC-AUC driven evaluation
 - Production-ready ML pipeline
+
+## Maintained by Anika
