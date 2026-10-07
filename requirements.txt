@@ -5,3 +5,10 @@ imbalanced-learn
 matplotlib
 seaborn
 joblib
+shap
+fastapi
+uvicorn
+xgboost
+lightgbm
+pytest
+ipykernel
