@@ -1,6 +1,5 @@
-# Credit Default Prediction System
 
-A machine learning-based risk assessment system for financial institutions to predict loan default probability, segment customers by risk, and provide explainable credit decisions.
+# Cash or Crash: An Explainable Machine Learning System for Predicting Credit Card Default Probability and Segmenting Customer Risk
 
 ---
 
