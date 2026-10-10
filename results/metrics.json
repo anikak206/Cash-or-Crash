@@ -1,0 +1,14 @@
+{
+  "roc_auc": 0.7808,
+  "pr_auc": 0.5655,
+  "gini": 0.5616,
+  "ks_statistic": 0.427,
+  "brier_score": 0.1342,
+  "default_rate_in_test": 0.2212,
+  "n_test_rows": 6000,
+  "model": "voting_ensemble",
+  "risk_thresholds": {
+    "low_max": 0.3,
+    "high_min": 0.6
+  }
+}

@@ -1,0 +1,4 @@
+band,customers,actual_default_rate,share_of_customers
+Low Risk - Approve,4614,0.127,0.769
+Medium Risk - Manual Review,818,0.416,0.136
+High Risk - Reject,568,0.704,0.095
