@@ -12,3 +12,4 @@ xgboost
 lightgbm
 pytest
 ipykernel
+httpx
