@@ -1,0 +1,96 @@
+{
+  "model": "voting_ensemble",
+  "machine": {
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 126 Stepping 5, GenuineIntel",
+    "cpu_cores": 8,
+    "package_versions": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "xgboost": "3.4.1",
+      "lightgbm": "4.7.0",
+      "shap": "0.52.0",
+      "joblib": "1.6.0",
+      "fastapi": "0.142.2",
+      "pydantic": "2.13.5",
+      "starlette": "1.7.0",
+      "uvicorn": "0.54.0",
+      "httpx": "0.28.1",
+      "pytest": "9.1.1",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "model_file_size_mb": {
+    "best_model.joblib": 7.04,
+    "credit_model.joblib": 0.0
+  },
+  "training_data": {
+    "rows": 24000,
+    "features": 29,
+    "memory_mb": 5.57
+  },
+  "model_load_seconds": 0.845,
+  "single_prediction": {
+    "runs": 100,
+    "mean_ms": 113.07,
+    "median_ms": 111.69,
+    "p95_ms": 152.61,
+    "max_ms": 227.3
+  },
+  "batch_prediction": {
+    "1": {
+      "seconds": 0.1445,
+      "ms_per_customer": 144.548
+    },
+    "10": {
+      "seconds": 0.127,
+      "ms_per_customer": 12.699
+    },
+    "100": {
+      "seconds": 0.1388,
+      "ms_per_customer": 1.388
+    },
+    "1000": {
+      "seconds": 0.1606,
+      "ms_per_customer": 0.161
+    }
+  },
+  "feature_preparation_ms": 15.63,
+  "model_only_ms_single_customer": 121.85,
+  "explanation_single_customer": {
+    "runs": 3,
+    "mean_ms": 800.87,
+    "median_ms": 810.29,
+    "p95_ms": 882.84,
+    "max_ms": 890.9
+  },
+  "api_predict_in_process": {
+    "runs": 50,
+    "mean_ms": 160.04,
+    "median_ms": 147.06,
+    "p95_ms": 233.5,
+    "max_ms": 371.19
+  },
+  "training_seconds_incl_5fold_cv": {
+    "voting_ensemble": 35.9,
+    "xgboost": 9.3,
+    "random_forest": 11.7,
+    "lightgbm": 7.6,
+    "logistic_regression": 0.8
+  },
+  "top_10_features_mean_abs_shap": {
+    "max_repayment_delay": 0.0476,
+    "PAY_0": 0.0421,
+    "avg_repayment_delay": 0.0193,
+    "credit_utilization": 0.0187,
+    "LIMIT_BAL": 0.0169,
+    "BILL_AMT1": 0.0151,
+    "payment_to_bill_ratio": 0.0103,
+    "PAY_AMT1": 0.01,
+    "PAY_AMT2": 0.0092,
+    "PAY_AMT3": 0.0086
+  }
+}
