@@ -1,0 +1,13 @@
+case,expected,observed,passed
+"New customer, no history",no crash (the answer is recorded),"probability 0.239, Low Risk - Approve",True
+Pays in full every month,Low risk,"probability 0.031, Low Risk - Approve",True
+"Six months late, near the limit","Medium or High risk, never Low","probability 0.478, Medium Risk - Manual Review",True
+Overpaid: negative bills,no crash,"probability 0.110, Low Risk - Approve",True
+"Very large limit, small bills",Low risk,"probability 0.062, Low Risk - Approve",True
+Bill three times the limit,no crash,"probability 0.118, Low Risk - Approve",True
+Credit limit of 0,clear error mentioning LIMIT_BAL,ValueError: LIMIT_BAL (credit limit) must be greater than 0,True
+Missing field AGE,clear error mentioning missing fields,ValueError: Missing required fields: ['AGE'],True
+Text instead of a number,"error, no wrong answer","ValueError: Unable to parse string ""abc"" at position 0",True
+Unknown education code 6,same answer as code 4 (cleaning groups them),"probability 0.033, Low Risk - Approve",True
+Unknown marriage code 0,same answer as code 3 (cleaning groups them),"probability 0.045, Low Risk - Approve",True
+Extra fields ID and default,extra fields ignored,"probability 0.048, Low Risk - Approve",True

@@ -1,0 +1,9 @@
+request,expected_status,observed_status,passed
+GET /health,200,200,True
+"POST /predict, valid customer",200,200,True
+"POST /predict, SEX = 5",422,422,True
+"POST /predict, LIMIT_BAL = 0",422,422,True
+"POST /predict, AGE missing",422,422,True
+"POST /predict/batch, 3 customers",200,200,True
+"POST /predict/batch, empty list",422,422,True
+GET /unknown-page,404,404,True

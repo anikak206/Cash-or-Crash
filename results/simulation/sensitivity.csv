@@ -1,0 +1,34 @@
+sweep,value,probability
+latest payment delay (PAY_0),-2,0.0543
+latest payment delay (PAY_0),-1,0.0537
+latest payment delay (PAY_0),0,0.0477
+latest payment delay (PAY_0),1,0.1202
+latest payment delay (PAY_0),2,0.6455
+latest payment delay (PAY_0),3,0.6465
+latest payment delay (PAY_0),4,0.6575
+latest payment delay (PAY_0),5,0.6327
+latest payment delay (PAY_0),6,0.6505
+latest payment delay (PAY_0),7,0.6519
+latest payment delay (PAY_0),8,0.6628
+"credit limit (bills fixed at 50,000)",10000,0.1052
+"credit limit (bills fixed at 50,000)",20000,0.1058
+"credit limit (bills fixed at 50,000)",50000,0.1085
+"credit limit (bills fixed at 50,000)",100000,0.0477
+"credit limit (bills fixed at 50,000)",200000,0.0331
+"credit limit (bills fixed at 50,000)",500000,0.0226
+"credit limit (bills fixed at 50,000)",1000000,0.0251
+personal attribute: SEX,1,0.0594
+personal attribute: SEX,2,0.0477
+personal attribute: MARRIAGE,1,0.0477
+personal attribute: MARRIAGE,2,0.0441
+personal attribute: MARRIAGE,3,0.0449
+personal attribute: EDUCATION,1,0.0472
+personal attribute: EDUCATION,2,0.0477
+personal attribute: EDUCATION,3,0.0429
+personal attribute: EDUCATION,4,0.0334
+personal attribute: AGE,21,0.0508
+personal attribute: AGE,25,0.0528
+personal attribute: AGE,35,0.0477
+personal attribute: AGE,50,0.0523
+personal attribute: AGE,65,0.0534
+personal attribute: AGE,79,0.0547

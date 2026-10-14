@@ -1,0 +1,8 @@
+step,roc_auc,ks
+Guess (same score for everyone),0.5,0.0
+Rule: low credit limit,0.5955,0.1567
+Rule: high credit utilisation,0.5495,0.1356
+Rule: latest payment delay (PAY_0),0.6762,0.3553
+Rule: worst delay in six months,0.6913,0.3758
+"Logistic regression, 29 features",0.7245,0.3848
+Final model (voting_ensemble),0.7808,0.427

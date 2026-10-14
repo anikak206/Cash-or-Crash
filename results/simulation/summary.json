@@ -1,0 +1,66 @@
+{
+  "model": "voting_ensemble",
+  "rule_pay0_at_least_2": {
+    "customers_flagged_share": 0.106,
+    "precision": 0.6903,
+    "recall": 0.3308
+  },
+  "auc_ladder": {
+    "Guess (same score for everyone)": 0.5,
+    "Rule: low credit limit": 0.5955,
+    "Rule: high credit utilisation": 0.5495,
+    "Rule: latest payment delay (PAY_0)": 0.6762,
+    "Rule: worst delay in six months": 0.6913,
+    "Logistic regression, 29 features": 0.7245,
+    "Final model (voting_ensemble)": 0.7808
+  },
+  "profile_mix": [
+    {
+      "profile": "reliable",
+      "customers": 603,
+      "mean_probability": 0.042,
+      "share_low": 1.0,
+      "share_medium": 0.0,
+      "share_high": 0.0
+    },
+    {
+      "profile": "stretched",
+      "customers": 246,
+      "mean_probability": 0.171,
+      "share_low": 0.894,
+      "share_medium": 0.085,
+      "share_high": 0.02
+    },
+    {
+      "profile": "distressed",
+      "customers": 151,
+      "mean_probability": 0.621,
+      "share_low": 0.007,
+      "share_medium": 0.371,
+      "share_high": 0.623
+    }
+  ],
+  "sensitivity": {
+    "reference_probability": 0.0477,
+    "pay0_probability_at_minus2": 0.0543,
+    "pay0_probability_at_0": 0.0477,
+    "pay0_probability_at_2": 0.6455,
+    "pay0_probability_at_8": 0.6628,
+    "pay0_rank_correlation_with_probability": 0.864,
+    "pay0_steps_that_do_not_decrease": "7 of 10",
+    "limit_10k_vs_1m_probability": [
+      0.1052,
+      0.0251
+    ],
+    "largest_change_from_one_personal_attribute": 0.0143
+  },
+  "edge_cases": {
+    "passed": 12,
+    "total": 12,
+    "failed_cases": []
+  },
+  "api_checks": {
+    "passed": 8,
+    "total": 8
+  }
+}
