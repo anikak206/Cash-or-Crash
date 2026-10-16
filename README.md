@@ -23,4 +23,4 @@ Cash-or-Crash/
 ├── src/                  # Core source code (preprocessing, pipeline, utils)
 ├── .gitignore            # Git ignore rules
 ├── README.md             # Project documentation
-└── requirements.txt      # Python package dependencies# Cash-or-Crash Credit Risk Engine 
+└── requirements.txt      # Python package dependencies
