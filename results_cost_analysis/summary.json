@@ -1,0 +1,17 @@
+{
+  "assumption_note": "Costs are assumed example values, not real bank figures.",
+  "cost_per_missed_defaulter": 2500,
+  "cost_per_false_alarm": 500,
+  "n_customers": 6000,
+  "best_threshold": 0.14,
+  "best_total_cost": 1666000.0,
+  "best_recall": 0.806,
+  "best_flagged_share": 0.518,
+  "cost_approve_everyone": 3317500.0,
+  "cost_reject_everyone": 2336500.0,
+  "cost_at_0.3": 1790500.0,
+  "cost_at_0.6": 2401500.0,
+  "saving_vs_approve_everyone_pct": 49.8,
+  "saving_vs_reject_everyone_pct": 28.7,
+  "saving_vs_current_high_cutoff_pct": 30.6
+}
