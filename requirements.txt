@@ -13,3 +13,5 @@ lightgbm
 pytest
 ipykernel
 httpx
+# optional: experiment tracking
+# mlflow

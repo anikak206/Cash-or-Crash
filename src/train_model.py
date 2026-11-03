@@ -148,10 +148,32 @@ def save_outputs(results, fitted, X_train, balanced):
     return best_name
 
 
+def log_to_mlflow(results, best_name, balanced):
+    """Optional experiment tracking with MLflow (no-op if not installed)."""
+    try:
+        import mlflow
+    except ImportError:
+        return
+    try:
+        mlflow.set_experiment("cash-or-crash")
+        with mlflow.start_run():
+            mlflow.log_param("balanced", balanced)
+            mlflow.log_param("best_model", best_name)
+            for _, row in results.iterrows():
+                mlflow.log_metric(f"{row['model']}_cv_auc", float(row["cv_auc_mean"]))
+                mlflow.log_metric(f"{row['model']}_test_auc", float(row["test_auc"]))
+            mlflow.log_metric("best_cv_auc", float(results.loc[0, "cv_auc_mean"]))
+            mlflow.log_metric("best_test_auc", float(results.loc[0, "test_auc"]))
+    except Exception as e:
+        print(f"! MLflow logging skipped: {e}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Train and compare credit default models")
     parser.add_argument("--balanced", action="store_true",
                         help="use class weights to handle the 22%% default imbalance")
+    parser.add_argument("--mlflow", action="store_true",
+                        help="log the experiment to MLflow (requires mlflow)")
     args = parser.parse_args()
 
     X_train, X_test, y_train, y_test = load_processed_data()
@@ -166,6 +188,8 @@ def main():
     print("\n=== Model comparison (sorted by CV AUC) ===")
     print(results.round(4).to_string(index=False))
     save_outputs(results, fitted, X_train, args.balanced)
+    if args.mlflow:
+        log_to_mlflow(results, results.loc[0, "model"], args.balanced)
 
 
 if __name__ == "__main__":
